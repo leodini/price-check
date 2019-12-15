@@ -29,7 +29,7 @@ def send_mail():
     server.starttls()
     server.ehlo()
 
-    server.login('leodini@hotmail.com', '1qaz2wsx3edc')
+    server.login()
 
     subject = 'price fell down!'
     body = 'Ceck the amazon link ' + URL
@@ -37,8 +37,8 @@ def send_mail():
     # msg = f'Subject: {subject}{body}'
 
     server.sendmail(
-        'leodini@hotmail.com',
-        'leodini@hotmail.com',
+        'email',
+        'email',
         msg
     )
 
